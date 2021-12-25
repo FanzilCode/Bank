@@ -15,6 +15,14 @@ namespace Bank
         // контактное лицо
         string person;
 
+        // св-во для поля title
+        public string Title
+        {
+            get
+            {
+                return title;
+            }
+        }
         // конструктор с 5-ю параметрами
         public Client(string title, string property, string address, string phone, string person)
         {
@@ -58,9 +66,10 @@ namespace Bank
             return $"{title}%{property}%{address}%{phone}%{person}";
         }
         // метод Print() для выведения на экран информации о клиенте
-        public void Print()
+        public void Print(int index)
         {
-            Console.WriteLine($"Название: {title}\n" +
+            Console.WriteLine($"Индекс: {index}\n" +
+                $"Название: {title}\n" +
                 $"Вид собственности: {property}\n" +
                 $"Адрес: {address}\n" +
                 $"Телефон: {phone}\n" +
